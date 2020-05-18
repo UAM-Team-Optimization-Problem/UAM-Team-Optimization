@@ -1,0 +1,7 @@
+README.md
+setup.py
+UAM_team_optimization/__init__.py
+UAM_team_optimzation.egg-info/PKG-INFO
+UAM_team_optimzation.egg-info/SOURCES.txt
+UAM_team_optimzation.egg-info/dependency_links.txt
+UAM_team_optimzation.egg-info/top_level.txt
