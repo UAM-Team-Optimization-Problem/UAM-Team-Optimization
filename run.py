@@ -69,7 +69,7 @@ prob.setup()
 
 comp = IndepVarComp()
 # comp.add_output('EmptyWeight', val=6000)
-comp.add_output('v_inf' , val= 240)
+comp.add_output('v_inf' , val= 60)
 comp.add_output('q' , val= 250)
 comp.add_output('EngRt' , val= 40)
 comp.add_output('MfgRt' , val= 30)
