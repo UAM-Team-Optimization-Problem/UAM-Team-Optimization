@@ -64,12 +64,12 @@ from UAM_team_optimization.components.ac_comp import AcComp
 
 prob = Problem()
 model = Group()
-prob.model = model
-prob.setup()
+# prob.model = model
+# prob.setup()
 
 comp = IndepVarComp()
 # comp.add_output('EmptyWeight', val=6000)
-comp.add_output('v_inf' , val= 60)
+comp.add_output('v_inf' , val= 240)
 comp.add_output('q' , val= 250)
 comp.add_output('EngRt' , val= 40)
 comp.add_output('MfgRt' , val= 30)
@@ -78,7 +78,7 @@ comp.add_output('QcRt' , val= 37)
 comp.add_output('kwh' , val= 133)
 comp.add_output('kwhcost' , val= 137)
 comp.add_output('num_motor' , val= 12)
-model.add_subsystem('inputs_comp', comp, promotes=['*'])
+
 
 
 
@@ -122,6 +122,8 @@ comp.add_output('tail_prop_rad',val = 0.8)
 comp.add_output('wing_inner_thrust_coeff', val = wing_inner_prop_thrust_coeff)
 comp.add_output('wing_outer_thrust_coeff', val = wing_outer_prop_thrust_coeff)
 comp.add_output('tail_thrust_coeff', val = tail_prop_thrust_coeff)
+model.add_subsystem('inputs_comp', comp, promotes=['*'])
+
 
 comp = GeometryComp()
 model.add_subsystem('geometry_comp', comp, promotes = ['*'])
@@ -203,6 +205,7 @@ model.add_subsystem('structcost_comp', comp, promotes=['*'])
 comp=AcComp()
 model.add_subsystem('ac_comp', comp, promotes=['*'])
 
+prob.model = model
 prob.setup(check = True)
 prob.run_model()
 prob.check_partials(compact_print=True)
