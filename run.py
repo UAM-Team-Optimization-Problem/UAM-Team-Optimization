@@ -43,10 +43,10 @@ from UAM_team_optimization.components.Geometry.geometry_comp import GeometryComp
 from UAM_team_optimization.components.Propulsion.propulsion_comp import wing_outer_prop_thrust_coeff, wing_inner_prop_thrust_coeff,tail_prop_thrust_coeff
 from UAM_team_optimization.components.Aero.axial_int_comp import AxialIntComp
 from UAM_team_optimization.components.Aero.percent_blown_comp import PercentBlownComp
-from UAM_team_optimization.components.weightsandstability.emptyweight_comp import EmptyWeightComp
-from UAM_team_optimization.components.weightsandstability.grossweight_comp import GrossWeightComp
-from UAM_team_optimization.components.weightsandstability.xcg_comp import XCGComp
-from UAM_team_optimization.components.weightsandstability.xnp_comp import XNPComp
+from UAM_team_optimization.components.Weights.emptyweight_comp import EmptyWeightComp
+from UAM_team_optimization.components.Weights.grossweight_comp import GrossWeightComp
+from UAM_team_optimization.components.Weights.xcg_comp import XCGComp
+from UAM_team_optimization.components.Weights.xnp_comp import XNPComp
 from UAM_team_optimization.components.enghr_comp import EngHrComp
 from UAM_team_optimization.components.mfghr_comp import MfgHrComp
 from UAM_team_optimization.components.toolhr_comp import ToolHrComp
