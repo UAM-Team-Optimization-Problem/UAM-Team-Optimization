@@ -1,6 +1,6 @@
 import unittest
 
-from UAM_team_optimization.components.percent_blown_comp import PercentBlownComp
+from UAM_team_optimization.components.Aero.percent_blown_comp import PercentBlownComp
 from openmdao.api import Problem
 from openmdao.utils.assert_utils import assert_check_partials 
 

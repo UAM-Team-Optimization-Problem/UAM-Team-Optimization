@@ -36,7 +36,7 @@ class EconGroup(Group):
         self.add_subsystem('develcost_comp', comp, promotes = ['*'])
         comp = EngHrComp()
         self.add_subsystem('enghr_comp', comp, promotes = ['*'])
-        comp = FltCostComp()
+        comp = FltCostComp(fta=6)
         self.add_subsystem('fltcost_comp', comp, promotes = ['*'])
         comp = LaborCostComp()
         self.add_subsystem('laborcost_comp', comp, promotes = ['*'])

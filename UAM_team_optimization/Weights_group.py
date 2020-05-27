@@ -18,11 +18,11 @@ class WeightsGroup(Group):
         shape = self.options['shape']
         
         # 
-        comp = EmptyWeightComp()
+        comp = EmptyWeightComp(rho=1.2)
         self.add_subsystem('emptyweight_comp', comp, promotes = ['*'])
-        comp = GrossWeightComp()
+        comp = GrossWeightComp(rho=1.2)
         self.add_subsystem('grossweight_comp', comp, promotes = ['*'])
-        comp = WingWeightComp()
+        comp = WingWeightComp(rho=1.2)
         self.add_subsystem('wingweight_comp', comp, promotes = ['*'])
         comp = XCGComp()
         self.add_subsystem('xcg_comp', comp, promotes = ['*'])

@@ -1,6 +1,6 @@
 import unittest
 
-from UAM_team_optimization.components.cdi_wing_comp import CDiWingComp
+from UAM_team_optimization.components.Aero.cdi_wing_comp import CDiWingComp
 from openmdao.api import Problem
 from openmdao.utils.assert_utils import assert_check_partials 
 

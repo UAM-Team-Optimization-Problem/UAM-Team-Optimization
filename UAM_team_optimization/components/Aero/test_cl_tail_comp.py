@@ -1,6 +1,6 @@
 import unittest
 
-from UAM_team_optimization.components.cl_tail_comp import CLTailComp
+from UAM_team_optimization.components.Aero.cl_tail_comp import CLTailComp
 from openmdao.api import Problem
 from openmdao.utils.assert_utils import assert_check_partials 
 
