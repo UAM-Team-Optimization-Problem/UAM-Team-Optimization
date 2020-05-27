@@ -47,8 +47,8 @@ from UAM_team_optimization.components.Aero.percent_blown_comp import PercentBlow
 from UAM_team_optimization.components.Geometry.geometry_comp import GeometryComp
 
 # Import components from PROPULSION:
-from UAM_team_optimization.components.Propulsion.propulsion_comp import wing_outer_prop_thrust_coeff, wing_inner_prop_thrust_coeff,tail_prop_thrust_coeff
-
+from UAM_team_optimization.components.Propulsion.propulsion_comp import wing_left_outer_prop_thrust_coeff, wing_left_inner_prop_thrust_coeff,tail_left_prop_thrust_coeff
+from UAM_team_optimization.components.Propulsion.propulsion_comp import wing_right_outer_prop_thrust_coeff, wing_right_inner_prop_thrust_coeff,tail_right_prop_thrust_coeff
 # Import components from WEIGHTS:
 from UAM_team_optimization.components.Weights.wingweight_comp import WingWeightComp
 # from UAM_team_optimization.components.Weights.tailweight_comp import TailWeightComp
@@ -109,9 +109,12 @@ comp.add_output('tail_area', val = 4 )
 comp.add_output('wing_prop_inner_rad',val = 0.8)
 comp.add_output('wing_prop_outer_rad',val = 0.8)
 comp.add_output('tail_prop_rad',val = 0.8)
-comp.add_output('wing_inner_thrust_coeff', val = wing_inner_prop_thrust_coeff)
-comp.add_output('wing_outer_thrust_coeff', val = wing_outer_prop_thrust_coeff)
-comp.add_output('tail_thrust_coeff', val = tail_prop_thrust_coeff)
+comp.add_output('wing_left_inner_thrust_coeff', val = wing_left_inner_prop_thrust_coeff)
+comp.add_output('wing_left_outer_thrust_coeff', val = wing_left_outer_prop_thrust_coeff)
+comp.add_output('tail_left_thrust_coeff', val = tail_left_prop_thrust_coeff)
+comp.add_output('wing_right_inner_thrust_coeff', val = wing_right_inner_prop_thrust_coeff)
+comp.add_output('wing_right_outer_thrust_coeff', val = wing_right_outer_prop_thrust_coeff)
+comp.add_output('tail_right_thrust_coeff', val = tail_right_prop_thrust_coeff)
 
 # Weights initial values:
 comp.add_output('w_design', val=26700.)
