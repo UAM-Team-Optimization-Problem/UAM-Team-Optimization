@@ -2,6 +2,7 @@ import numpy as np
 
 from openmdao.api import Problem, IndepVarComp, Group
 from openmdao.api import ExplicitComponent
+from lsdo_aircraft.api import SimpleRotor, SimpleMotor
 
 import numpy as np
 

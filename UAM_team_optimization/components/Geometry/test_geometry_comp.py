@@ -1,8 +1,7 @@
 import unittest
 
 # from UAM_team_optimization.components.Geometry.geometry_comp import GeometryComp
-from UAM_team_optimization.components.Geometry.geometry_comp import GeometryComp
-# from geometry_comp import GeometryComp
+from .geometry_comp import GeometryComp
 from openmdao.api import Problem
 from openmdao.utils.assert_utils import assert_check_partials 
 

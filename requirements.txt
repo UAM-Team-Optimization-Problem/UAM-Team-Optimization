@@ -1,2 +1,4 @@
 -e git+https://github.com/OpenMDAO/OpenMDAO.git#egg=OpenMDAO
+-e git+https://github.com/lsdolab/lsdo_aircraft.git#egg=lsdo_aircraft
+-e git+https://github.com/lsdolab/lsdo_utils.git#egg=lsdo_utils
 nose

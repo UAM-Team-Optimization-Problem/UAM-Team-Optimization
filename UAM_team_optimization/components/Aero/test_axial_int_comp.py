@@ -1,6 +1,7 @@
 import unittest
 
-from UAM_team_optimization.components.Aero.axial_int_comp import AxialIntComp
+# from UAM_team_optimization.components.Aero.axial_int_comp import AxialIntComp
+from axial_int_comp import AxialIntComp
 from openmdao.api import Problem
 from openmdao.utils.assert_utils import assert_check_partials 
 

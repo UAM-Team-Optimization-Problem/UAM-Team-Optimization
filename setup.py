@@ -7,6 +7,6 @@ setup(
     packages=[
         'UAM_team_optimization',
     ],
-    install_requires=[
+    install_requires=[lsdo_utils
     ],
 )
