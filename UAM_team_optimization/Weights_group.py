@@ -1,6 +1,6 @@
 from openmdao.api import Group, IndepVarComp
 
-from lsdo_utils.api import PowerCombinationComp, LinearCombinationComp
+# from lsdo_utils.api import PowerCombinationComp, LinearCombinationComp
 from UAM_team_optimization.components.Weights.emptyweight_comp import EmptyWeightComp
 from UAM_team_optimization.components.Weights.grossweight_comp import GrossWeightComp
 from UAM_team_optimization.components.Weights.wingweight_comp import WingWeightComp

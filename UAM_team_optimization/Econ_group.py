@@ -1,6 +1,6 @@
 from openmdao.api import Group, IndepVarComp
 
-from lsdo_utils.api import PowerCombinationComp, LinearCombinationComp
+# from lsdo_utils.api import PowerCombinationComp, LinearCombinationComp
 from UAM_team_optimization.components.Economics.ac_comp import AcComp
 from UAM_team_optimization.components.Economics.avionicscost_comp import AvionicsCostComp
 from UAM_team_optimization.components.Economics.batterycost_comp import BatteryCostComp
