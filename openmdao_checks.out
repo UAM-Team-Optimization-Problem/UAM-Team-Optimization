@@ -1,11 +1,5 @@
-INFO: checking out_of_order
 WARNING: The following systems are executed out-of-order:
    System 'economics_group.ac_comp' executes out-of-order with respect to its source systems ['economics_group.laborcost_comp', 'economics_group.structcost_comp']
    System 'economics_group.laborcost_comp' executes out-of-order with respect to its source systems ['economics_group.mfghr_comp', 'economics_group.qchr_comp', 'economics_group.toolhr_comp']
 
-INFO: checking system
-INFO: checking solvers
-INFO: checking dup_inputs
-INFO: checking missing_recorders
 WARNING: The Problem has no recorder of any kind attached
-INFO: checking comp_has_no_outputs
