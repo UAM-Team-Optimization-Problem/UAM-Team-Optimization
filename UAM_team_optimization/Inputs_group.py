@@ -108,7 +108,6 @@ class InputsGroup(Group):
         comp.add_output('MfgRt' , val= 30)
         comp.add_output('ToolRt' , val= 21)
         comp.add_output('QcRt' , val= 37)
-        comp.add_output('kwh' , val= 133)
         comp.add_output('kwhcost' , val= 137)
 
         comp.add_output('num_motor' , val= 6)
@@ -119,7 +118,7 @@ class InputsGroup(Group):
         comp.add_output('flthr_yr' , val= 2000)
         comp.add_output('years' , val= 5)
         comp.add_output('t_tol' , val= .1)
-        comp.add_output('distance' , val= 100)
+        comp.add_output('distance' , val= 20000)
         comp.add_output('savings' , val= .6985)
         comp.add_output('v_drive' , val= 31.2)
 

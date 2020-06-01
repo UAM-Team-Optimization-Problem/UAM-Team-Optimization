@@ -22,8 +22,8 @@ class FareComp(ExplicitComponent):
     def compute(self, inputs, outputs):
         
         Price_km = inputs['Price_km']
-        v_inf = inputs['v_inf']
-        distance = inputs['distance']
+        v_inf = inputs['v_inf']*3.6
+        distance = inputs['distance']/1000
         v_drive = inputs['v_drive']
         t_tol = inputs['t_tol']
         savings = inputs['savings']
@@ -34,8 +34,8 @@ class FareComp(ExplicitComponent):
     def compute_partials(self, inputs, partials):
        
         Price_km = inputs['Price_km']
-        v_inf = inputs['v_inf']
-        distance = inputs['distance']
+        v_inf = inputs['v_inf']*3.6
+        distance = inputs['distance']/1000
         v_drive = inputs['v_drive']
         t_tol = inputs['t_tol']
         savings = inputs['savings']

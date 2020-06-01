@@ -5,7 +5,7 @@ from openmdao.api import ExplicitComponent
 class BatteryCostComp(ExplicitComponent):
 
     def setup(self):
-        self.add_input('kwh')
+        self.add_input('total_avail_energy_kWh')
         self.add_input('kwhcost')
         self.add_input('quantity')
         self.add_output('BatteryCost')
@@ -16,18 +16,18 @@ class BatteryCostComp(ExplicitComponent):
         
     def compute(self, inputs, outputs):
         
-        kwh = inputs['kwh']
+        total_avail_energy_kWh = inputs['total_avail_energy_kWh']
         kwhcost = inputs['kwhcost']
         quantity = inputs['quantity']
 
-        outputs['BatteryCost'] = kwh * kwhcost * quantity
+        outputs['BatteryCost'] = total_avail_energy_kWh * kwhcost * quantity
 
     def compute_partials(self, inputs, partials):
        
-        kwh = inputs['kwh']
+        total_avail_energy_kWh = inputs['total_avail_energy_kWh']
         kwhcost = inputs['kwhcost']
         quantity = inputs['quantity']
 
-        partials['BatteryCost', 'quantity'] = kwh * kwhcost
-        partials['BatteryCost', 'kwh'] = quantity * kwhcost
-        partials['BatteryCost', 'kwhcost'] = kwh * quantity
+        partials['BatteryCost', 'quantity'] = total_avail_energy_kWh * kwhcost
+        partials['BatteryCost', 'total_avail_energy_kWh'] = quantity * kwhcost
+        partials['BatteryCost', 'kwhcost'] = total_avail_energy_kWh * quantity

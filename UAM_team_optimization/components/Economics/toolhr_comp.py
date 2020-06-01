@@ -16,16 +16,16 @@ class ToolHrComp(ExplicitComponent):
         
     def compute(self, inputs, outputs):
         
-        EmptyWeight = inputs['EmptyWeight']
-        v_inf = inputs['v_inf']
+        EmptyWeight = inputs['EmptyWeight']/9.8
+        v_inf = inputs['v_inf']*3.6
         quantity = inputs['quantity']
 
         outputs['ToolHr'] = 7.22 * EmptyWeight**.777 * v_inf**.696 * quantity**.263
 
     def compute_partials(self, inputs, partials):
        
-        EmptyWeight = inputs['EmptyWeight']
-        v_inf = inputs['v_inf']
+        EmptyWeight = inputs['EmptyWeight']/9.8
+        v_inf = inputs['v_inf']*3.6
         quantity = inputs['quantity']
 
         partials['ToolHr', 'EmptyWeight'] = 5.60994 * EmptyWeight**-.223 * v_inf**.696 * quantity**.263

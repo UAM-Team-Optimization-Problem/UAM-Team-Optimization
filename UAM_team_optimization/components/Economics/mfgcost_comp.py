@@ -15,16 +15,16 @@ class MfgCostComp(ExplicitComponent):
         self.declare_partials('MfgCost', 'quantity')
     def compute(self, inputs, outputs):
         
-        EmptyWeight = inputs['EmptyWeight']
-        v_inf = inputs['v_inf']
+        EmptyWeight = inputs['EmptyWeight']/9.8
+        v_inf = inputs['v_inf']*3.6
         quantity = inputs['quantity']
 
         outputs['MfgCost'] = 1.1236 * 31.2 * EmptyWeight**.921 * v_inf**.621 * quantity**.799
 
     def compute_partials(self, inputs, partials):
        
-        EmptyWeight = inputs['EmptyWeight']
-        v_inf = inputs['v_inf']
+        EmptyWeight = inputs['EmptyWeight']/9.8
+        v_inf = inputs['v_inf']*3.6
         quantity = inputs['quantity']
 
         partials['MfgCost', 'EmptyWeight'] = 1.1236 * 28.7352 * EmptyWeight**-.079 * v_inf**.621 * quantity**.799
